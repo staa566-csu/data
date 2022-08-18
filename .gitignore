@@ -1,3 +1,7 @@
+# Large final data files
+COVID19/*.rda
+NHTSA_FARS/*.rda
+
 # History files
 .Rhistory
 .Rapp.history
