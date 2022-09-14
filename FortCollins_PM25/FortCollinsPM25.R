@@ -28,4 +28,4 @@ colnames(fc_pm) <- c("State","County","SiteNum","Date","PM","City","SiteName","A
 
 
 # save files
-save(fc_pm, file="Lectures/Data/FortCollins_PM25/fc_pm.rda")
+save(fc_pm, file="FortCollins_PM25/fc_pm.rda")

@@ -3,7 +3,11 @@ library(tidyverse)
 library(tidycensus)
 
 # download data
-covid_county <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv")
+covid_county_2020 <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-2020.csv")
+covid_county_2021 <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-2021.csv")
+covid_county_2022 <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-2022.csv")
+
+covid_county <- bind_rows(covid_county_2020,covid_county_2021,covid_county_2022)
 
 covid_county <- covid_county %>%
   arrange(state,county,date) %>%
@@ -44,6 +48,6 @@ covid_county <- covid_county %>%
          deaths_14day_per100k = 100000*deaths_14day/pop2010)
 
 
-save(covid_county, file="Lectures/Data/COVID19/covid_county.rda")
+save(covid_county, file="COVID19/covid_county.rda")
 
 
