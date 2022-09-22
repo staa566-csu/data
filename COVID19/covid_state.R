@@ -44,6 +44,6 @@ covid_state <- covid_state %>%
          deaths_14day_per100k = 100000*deaths_14day/pop2010)
 
 
-save(covid_state, file="Lectures/Data/COVID19/covid_state.rda")
+save(covid_state, file="COVID19/covid_state.rda")
 
 
