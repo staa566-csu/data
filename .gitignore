@@ -1,6 +1,8 @@
 # Large final data files
 COVID19/*.rda
 NHTSA_FARS/*.rda
+National_PM25/*.rda
+FortCollins_PM25/*.rda
 
 # History files
 .Rhistory
